@@ -1,58 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - A Engineer's Hub</title>
-    <link rel="stylesheet" href="login.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="images/logo.png" alt="Engineer’s Hub Logo">
-        </div>
-        <ul>
-            <p class="wname"><b>ENGINEERSHUB</b></p>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="project.html">Projects</a></li>
-            <li><a href="course.html">Courses</a></li>
-            <li><a href="contactus.html">Contact Us</a></li>
-            <li><a href="login.html">Login</a></li>
-            
-        </ul>
-        <!-- Toggle Theme Icon -->
-        <div class="theme-toggle" onclick="toggleTheme()">
-            <img src="images/theme-icon.png" alt="Toggle Theme" id="theme-icon">
-        </div>
-    </nav>
+  <h2>Login</h2>
+  
+  <form onsubmit="return loginUser()">
+    <label for="login-username">Username:</label>
+    <input type="text" id="login-username" required />
 
-    <!-- Login Form -->
-    <section class="login-form">
-        <h2>Login</h2>
-        <form id="login-form" onsubmit="return validateLogin()">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit" class="btn">Login</button>
-        </form>
-    </section>
+    <label for="login-password">Password:</label>
+    <input type="password" id="login-password" required />
 
-  <!-- Footer -->
-  <footer>
-    <p>
-   
-        Our team make sure that every user who uses our website should  have a good user experience,
-        and should find a good projects and courses.
-    </p>
-    <p><b>2025-ENGINEERSHUB</b> "Empowering engineers to create, innovate, and lead the future"
+    <button type="submit">Login</button>
 
-    </p>
-</footer>
+    <p id="login-error" class="error"></p>
+  </form>
 
-    <script src="login.js"></script>
+  <p>Don't have an account? <a href="register.html">Register here</a></p>
+
+  <script src="script.js"></script>
 </body>
 </html>
